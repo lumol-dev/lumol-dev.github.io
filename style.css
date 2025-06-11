@@ -1,97 +1,6 @@
-body {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin: 0;
-  background-color: #000;
-  color: #fff;
-  scroll-behavior: smooth;
-}
-
-.navbar {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  max-width: 95%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(151, 151, 151, 0.137);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 200;
-}
-
-.loginbar {
-  position: fixed;
-  top: 10px;
-  left: 100%;
-  transform: translateX(-105%);
-  margin: 0;
-  max-width: 95%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(151, 151, 151, 0.137);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 201;
-}
-
 body::before {
   content: "";
   display: block;
-}
-
-.navbar .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-family: 'Brigends Expanded';
-  src: url('brigends.ttf') format('truetype');
-  color: white;
-  text-decoration: none;
-  padding-right: 3rem;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 15px;
-}
-
-.nav-links a:hover {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: rgba(151, 151, 151, 0.137);
-  backdrop-filter: blur(10px);
-  color: rgb(200, 200, 200);
 }
 
 .hero {
@@ -361,7 +270,6 @@ footer a:hover {
 }
 
 .scroll-left {
-  /* Remove transform here */
   right: 50%;
   text-align: right;
   font-size: 4rem;
@@ -369,8 +277,48 @@ footer a:hover {
 }
 
 .scroll-right {
-  /* Remove transform here */
   left: 50%;
   text-align: left;
   font-size: 1.2rem;
+}
+
+.scroll-text-container2 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scroll-text2 {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0;
+  color: white;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.2s linear;
+}
+
+.scroll-left2 {
+  right: 50%;
+  text-align: right;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.scroll-right2 {
+  left: 50%;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.scroll-text2 h2 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
 }

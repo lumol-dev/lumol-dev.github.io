@@ -1,0 +1,125 @@
+.purchase-container {
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 5vw;
+    gap: 5vw;
+}
+
+.font {
+    font-family: 'Brigends Expanded';
+    src: url('brigends.ttf') format('truetype');
+}
+
+.slideshow {
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.purchase-info {
+    max-width: 30vw;
+}
+
+.purchase-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.purchase-info p {
+    font-size: 1.1rem;
+    margin: 0.3rem;
+}
+
+.purchase-info h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.purchase-info button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    background-color: rgba(151, 151, 151, 0.137);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.purchase-info button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(223, 223, 223, 0.096);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: 0.2s;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.arrow:hover {
+    background: rgba(151, 151, 151, 0.329);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    background-color: rgba(151, 151, 151, 0.137);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 100%;
+}

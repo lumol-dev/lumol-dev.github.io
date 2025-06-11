@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
     window.addEventListener("resize", resizeCanvas);
 
     // Frame path generator
-    const currentFrame = i => `frames/${i.toString().padStart(4, '0')}.jpg`;
+    const currentFrame = i => `frames2/${i.toString().padStart(4, '0')}.jpg`;
 
     // Preload images
     for (let i = 1; i <= frameCount; i++) {
@@ -35,8 +35,8 @@ window.addEventListener('load', () => {
     images[0].onload = () => drawFrameWithAlpha(0, 0); // Start fully transparent
 
     // Get the section after which animation begins
-    const triggerSection = document.querySelector('.scrolling-img');
-    const triggerOffset = triggerSection.offsetTop;
+    const triggerSection = document.querySelector('.scrolling-img2');
+    const triggerOffset = triggerSection.offsetTop - 200;
 
     function drawFrameWithAlpha(index, alpha = 1) {
     const img = images[index];
@@ -71,7 +71,7 @@ window.addEventListener('load', () => {
     const fadeInEnd = fadeInStart + 300;
 
     const scrollStart = triggerOffset;
-    const scrollRange = 2100;
+    const scrollRange = 1500;
 
     const scrolled = Math.max(0, scrollTop - scrollStart);
     const scrollFraction = Math.min(1, scrolled / scrollRange);
@@ -102,9 +102,8 @@ window.addEventListener('load', () => {
 
 
 
-    const leftText = document.querySelector(".scroll-left");
-    const rightText = document.querySelector(".scroll-right");
-    const textSection = document.querySelector(".scroll-text-container");
+    const rightText = document.querySelector(".scroll-right2");
+    const textSection = document.querySelector(".scroll-text-container2");
 
     const sectionTop = textSection.offsetTop;
     const sectionHeight = textSection.offsetHeight;
@@ -122,11 +121,9 @@ window.addEventListener('load', () => {
     const gap = 200; // pixels between the two at origin
     const distance = 100; // full move-out distance
 
-    leftText.style.transform = `translateX(calc(${-gap}px - ${clamped * distance}px)) translateY(-50%)`;
     rightText.style.transform = `translateX(calc(${gap}px + ${clamped * distance}px)) translateY(-50%)`;
 
     // Fade text
-    leftText.style.opacity = fade;
     rightText.style.opacity = fade;
     });
 });
