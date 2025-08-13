@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="buy.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="buy.js"></script>
     <script src="https://kit.fontawesome.com/2c47143655.js" crossorigin="anonymous"></script>
 </head>
@@ -26,29 +26,106 @@
   </nav>
 
     <div class="purchase-container">
-        <div class="slideshow">
-            <div class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
-            <div class="arrow right"><i class="fa-solid fa-chevron-right"></i></div>
-            <div class="slides">
-                <img src="images/front.jpg" alt="Front">
-                <img src="images/side.jpg" alt="Side">
+        <div class="product-gallery">
+            <div class="slideshow">
+                <div class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="arrow right"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="slides">
+                    <div class="slide">
+                        <img src="images/front.jpg" alt="LUMOL Front View" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMzMzIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzk5OSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2Ij5GUk9OVCBWSUVXPC90ZXh0Pgo8L3N2Zz4K';">
+                    </div>
+                    <div class="slide">
+                        <img src="images/side.jpg" alt="LUMOL Side View" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMzMzIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzk5OSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2Ij5TSURFIFZJRVE8L3RleHQ+Cjwvc3ZnPgo=';">
+                    </div>
+                    <div class="slide">
+                        <img src="images/back.jpg" alt="LUMOL Back View" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMzMzIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZmlsbD0iIzk5OSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2Ij5CQUNLIFZJRVE8L3RleHQ+Cjwvc3ZnPgo=';">
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail-indicators">
+                <div class="thumbnail active" data-slide="0"></div>
+                <div class="thumbnail" data-slide="1"></div>
+                <div class="thumbnail" data-slide="2"></div>
             </div>
         </div>
 
         <div class="purchase-info">
-            <h1>Buy<br><span class="font" style="padding-left: 8px; font-size: 4rem;">LUMOL</span></h1>
-            <br>
-            <h3><span style="font-weight: initial;">from</span> $79 <span style="font-weight: initial;">with free shipping</span></h3>
-            <br>
-            <p style="margin-top: 1.5rem;">Your all in one desktop calendar solution.</p>
-            <p>No fees or subscriptions.</p>
-            <p>30 day warranty.</p>
-            <p>Support anywhere at any time.</p>
-            <br><br>
-            <div class="quantity">
-                <span>Quantity</span>
+            <div class="product-header">
+                <h1>Buy<br><span class="font" style="padding-left: 8px; font-size: 4rem;">LUMOL</span></h1>
+                <div class="rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="rating-text">4.9 (127 reviews)</span>
+                </div>
             </div>
-            <button>Continue to Checkout</button>
+            
+            <div class="price-section">
+                <h3><span style="font-weight: initial;">from</span> $79 <span style="font-weight: initial;">with free shipping</span></h3>
+                <p class="savings">Save $20 when you buy 2 or more</p>
+            </div>
+
+            <div class="product-highlights">
+                <div class="highlight-item">
+                    <div class="icon">📅</div>
+                    <div class="text">All-in-one desktop calendar solution</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="icon">💎</div>
+                    <div class="text">No fees or subscriptions</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="icon">🛡️</div>
+                    <div class="text">30-day warranty included</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="icon">🌍</div>
+                    <div class="text">24/7 global support</div>
+                </div>
+            </div>
+
+            <div class="whats-included">
+                <h4>What's in the box</h4>
+                <div class="included-items">
+                    <div class="item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>LUMOL Calendar Device</span>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-plug"></i>
+                        <span>USB-C Power Cable</span>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>WiFi Setup Guide</span>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Quick Start Manual</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quantity-section">
+                <label for="quantity">Quantity</label>
+                <div class="quantity-controls">
+                    <button class="quantity-btn decrease" id="decrease-btn">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="10" readonly>
+                    <button class="quantity-btn increase" id="increase-btn">+</button>
+                </div>
+                <div class="total-price">
+                    <span>Total: $<span id="total-price">79</span></span>
+                </div>
+            </div>
+
+            <button class="checkout-btn">
+                <i class="fa-solid fa-shopping-cart"></i>
+                Continue to Checkout
+            </button>
         </div>
     </div>
 </body>
