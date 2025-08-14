@@ -58,10 +58,11 @@ body::before {
     font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: white;
 }
 
 .hero-subtitle {
