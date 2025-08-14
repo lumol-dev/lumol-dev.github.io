@@ -1,0 +1,50 @@
+:root {
+  /* Primary Colors */
+  --primary-bg: #0a0a0a;
+  --secondary-bg: #111111;
+  --tertiary-bg: #1a1a1a;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #6b7280;
+  
+  /* Glass/Glassmorphism Effects */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-hover: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-border-hover: rgba(255, 255, 255, 0.3);
+  
+  /* Accent Colors */
+  --accent-primary: #ffffff;
+  --accent-secondary: #e5e7eb;
+  --accent-success: #10b981;
+  --accent-warning: #f59e0b;
+  
+  /* Button Colors */
+  --btn-primary-bg: var(--glass-bg);
+  --btn-primary-hover: var(--glass-bg-hover);
+  --btn-primary-border: var(--glass-border);
+  --btn-primary-border-hover: var(--glass-border-hover);
+  
+  /* Shadows */
+  --shadow-small: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-large: 0 12px 40px rgba(0, 0, 0, 0.3);
+  
+  /* Blur Effects */
+  --blur-light: blur(8px);
+  --blur-medium: blur(10px);
+  --blur-heavy: blur(20px);
+  
+  /* Border Radius */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-xl: 20px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}
