@@ -52,8 +52,7 @@ body::before {
 }
 
 .hero-title {
-    font-family: 'Brigends Expanded';
-    src: url('brigends.ttf') format('truetype');
+    font-family: 'Brigends Expanded', 'Inter', system-ui, sans-serif;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
