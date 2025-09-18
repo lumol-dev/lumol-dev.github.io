@@ -18,7 +18,12 @@
 <body>
     <nav class="navbar">
         <div class="logo"><a href="/">LUMOL</a></div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><button onclick="window.location.href='https://collwentzi.pythonanywhere.com/mydevices'">My LUMOL</button></li>
             <li><button onclick="window.location.href='features.html'">Features</button></li>
             <li><button onclick="window.location.href='buy.html'">Buy</button></li>
@@ -108,5 +113,26 @@
       A full anodized aluminum casing and real glass gives LUMOL an ultra premium feel.
     </div>
   </section>
+
+  <script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+      
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

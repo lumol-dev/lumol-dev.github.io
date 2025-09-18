@@ -1,3 +1,6 @@
+// Initialize Stripe
+const stripe = Stripe('YOUR_STRIPE_PUBLISHABLE_KEY');
+
 // Wait for DOM to be ready, then execute
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initializePage);
@@ -112,6 +115,57 @@ function initializePage() {
   }
 
   // No need for quantity input listener since it's hidden
+
+  // Checkout button handler
+  const checkoutBtn = document.querySelector('.checkout-btn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', async () => {
+      const quantity = parseInt(quantityInput.value) || 1;
+      const subtotal = quantity * basePrice;
+      let total = subtotal;
+      
+      if (quantity >= 3) {
+        total -= 20;
+      }
+      
+      // Create checkout session
+      try {
+        checkoutBtn.disabled = true;
+        checkoutBtn.innerHTML = '<span>Processing...</span>';
+        
+        // You'll need to create a backend endpoint to create the Stripe checkout session
+        // This is a placeholder for the actual implementation
+        const response = await fetch('/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            quantity: quantity,
+            price: total
+          })
+        });
+        
+        const session = await response.json();
+        
+        // Redirect to Stripe Checkout
+        const result = await stripe.redirectToCheckout({
+          sessionId: session.id
+        });
+        
+        if (result.error) {
+          alert(result.error.message);
+          checkoutBtn.disabled = false;
+          checkoutBtn.innerHTML = '<span>Checkout</span><i class="fa-solid fa-arrow-right"></i>';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+        checkoutBtn.disabled = false;
+        checkoutBtn.innerHTML = '<span>Checkout</span><i class="fa-solid fa-arrow-right"></i>';
+      }
+    });
+  }
 
   // Initialize
   showSlide(0);
